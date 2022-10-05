@@ -1,0 +1,143 @@
+h1{
+    text-align: center;
+}
+
+body{
+}
+.d_none{
+    display: none;
+}
+li{
+    list-style: none;
+    margin-right: 10px;
+}
+ul{
+    display: flex;
+}
+
+#panList{
+    display: flex;
+}
+
+#add{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.form{
+    width: 70%;
+    margin: 0 auto;
+}
+.red{
+    margin-left: 10px;
+    font-size: 14px;
+    color: red;
+}
+.title{
+    display: flex;
+    align-items: center;
+}
+form{
+}
+button{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    background-color: blue;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    width: 100px;
+    margin: 0 auto;
+}
+header{
+}
+.name{
+    text-align: center;
+}
+nav{
+    margin-left: 40%;
+}
+
+table{
+    width: 70%;
+    margin: 0 auto;
+}
+tr{
+    height: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.logout{
+    text-align: center;
+}
+#goAdd{
+    text-align: center;
+}
+
+.center{
+    text-align: center;
+}
+
+.data{
+    display: flex;
+}
+    
+#detail{
+    width: 30%;
+    margin: 0 auto;
+}
+
+#display{
+    display: flex;
+    width: 30%;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+#editpan{
+    margin-left: 35%;
+}
+h2{
+    text-align: center;
+}
+
+#editForm{
+    width: 40%;
+    margin: 0 auto;
+}
+
+#deleteform{
+    width: 30%;
+    margin: 0 auto;
+}
+
+.deletepan{
+    margin-left: 35%;
+}
+
+#login{
+    width: 40%;
+    margin: 0 auto;
+}
+
+#loginbtn{
+    width: 200px;
+    margin-top: 70px;
+}
+
+.redlogin{
+    color: red;
+    text-align: center;
+}
+
+.title{
+    width: 1000px;
+}
+
+input{
+    width: 400px;
+}

@@ -1,0 +1,139 @@
+{#
+/**
+ * PH35 Sample10 マスタテーブル管理完版
+ * 従業員情報編集画面。
+ *
+ * @author Shinzo SAITO
+ *
+ * ファイル名=empEdit.html
+ * フォルダ=/ph35/scottadminkan/templates/emp/
+ */
+#}
+ 
+ <!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Shinzo SAITO">
+        <title>従業員情報編集 | ScottAdminKan Sample</title>
+        <link rel="stylesheet" href="/ph35/scottadminkan/public/css/main.css" type="text/css">
+    </head>
+    <body>
+        <header>
+            <h1>従業員情報編集</h1>
+            <p><a href="/ph35/scottadminkan/public/logout.php">ログアウト</a></p>
+        </header>
+        <nav id="breadcrumbs">
+            <ul>
+                <li><a href="/ph35/scottadminkan/public/goTop.php">TOP</a></li>
+                <li><a href="/ph35/scottadminkan/public/emp/showEmpList.php">従業員リスト</a></li>
+                <li>従業員情報編集</li>
+            </ul>
+        </nav>
+        {% if validationMsgs %}
+        <section id="errorMsg">
+            <p>以下のメッセージをご確認ください。</p>
+            <ul>
+                {% for msg in validationMsgs %}
+                <li>{{msg}}</li>
+                {% endfor %}
+            </ul>
+        </section>
+        {% endif %}
+        <section>
+            <p>
+                情報を入力し、更新ボタンをクリックしてください。
+            </p>
+            
+
+
+            <form action="/ph35/scottadminkan/public/emp/empEdit.php" method="post" class="box">
+                部門ID:&nbsp;{{emp.id}}<br>
+                <input type="hidden" name="editEmId" value="{{emp.id}}"><br>
+                <label for="editEmNo">
+                    従業員番号&nbsp;<span class="required">必須</span><br>
+                    <input type="number" min="1000" max="9999" step="1" name="editEmNo" id="editEmNo" value="{{emp.emNo}}" required>
+                </label><br>
+                <label for="editEmName">
+                    従業員名&nbsp;<span class="required">必須</span><br>
+                    <input type="text" name="editEmName" id="editEmName" value="{{emp.emName}}" required>
+                </label><br>
+                <label for="editEmJob">
+                    役職&nbsp;<span class="required">必須</span><br>
+                    <input type="input" id="editEmJob"  name="editEmJob" value="{{emp.emJob}}" required>
+                </label><br>
+                <label for="editEmSal">
+                    給与&nbsp;<span class="required">必須</span><br>
+                    <input type="number" min="0"  name="editEmSal" id="editEmSal" value="{{emp.emSal}}" required>
+                </label><br>
+                <label for="editEmMgr">
+                    上司番号&nbsp;<span class="required">必須</span><br>
+                    <select name="editEmMgr" id="editEmMgr" required>
+                        <option value="">選択してください</option>
+                        {% if emp.emMgr is same as 0 %}
+                        <option value="0" selected>上司なし</option>
+                        {% else %}
+                        <option value="0">上司なし</option>
+                        {% endif %}
+                        {% for emNo, Mgr in empList %}
+                        {% if emp.emMgr is same as Mgr.emNo %}
+                        <option id="editMgr" value="{{Mgr.emNo}}" selected>氏名：{{Mgr.emName}}　社員番号:{{Mgr.emNo}}</option>
+                        {% else %}
+                        <option id="editMgr" value="{{Mgr.emNo}}">氏名：{{Mgr.emName}}　社員番号:{{Mgr.emNo}}</option>
+                        {% endif %}
+                        {% endfor %}
+                    </select>
+                </label><br>
+                <label for="editEmHiredate">
+                    雇用日&nbsp;<span class="required">必須</span><br>
+                    <select name="editEmHiredateYear" id="editEmHiredateYear" required>
+                        <option value="">--</option>
+                        {% for year in 2022..1980%}
+                        {% if emp.emHiredateYear == year %}
+                        <option value="{{year}}" selected>{{year}}</option>
+                        {% else %}
+                        <option value="{{year}}">{{year}}</option>
+                        {% endif %}
+                        {%endfor%}
+                    </select> 
+                    年
+                    <select name="editEmHiredateMonth" id="editEmHiredateMonth" required>
+                        <option value="">--</option>
+                        {% for month in 1..12%}
+                        {% if emp.emHiredateMonth ==  month%}
+                        <option value="{{month}}" selected>{{month}}</option>
+                        {% else %}
+                        <option value="{{month}}">{{month}}</option>
+                        {% endif %}
+                        {%endfor%}
+                    </select>
+                    月
+                    <select name="editEmHiredateDay" id="editEmHiredateDay" required>
+                        <option value="">--</option>
+                        {% for day in 1..31%}
+                        {% if emp.emHiredateday == day %}
+                        <option value="{{day}}" selected>{{day}}</option>
+                        {% else %}
+                        <option value="{{day}}">{{day}}</option>
+                        {% endif %}
+                        {%endfor%}
+                    </select> 
+                    日 
+                </label><br>
+                <label for="editDeptId">
+                    部門ID&nbsp;<span class="required">必須</span><br>
+                    <select name="editDeptId" id="editDeptId" required>
+                        <option value="">選択してください</option>
+                        {% for dpId, dept  in deptList %}
+                        <option id="editDeptId" value="{{dpId}}">{{dept.dpNo}}:{{dept.dpName}}</option>
+                        {% if emp.deptId is same as dpId %}
+                        <option id="editDeptId" value="{{dpId}}" selected>{{dept.dpNo}}:{{dept.dpName}}</option>
+                        {% endif %}
+                        {%endfor%}
+                    </select>
+                </label><br>
+                <button type="submit">更新</button>
+            </form>
+        </section>
+    </body>
+</html>

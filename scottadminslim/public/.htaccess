@@ -1,0 +1,11 @@
+# PH35 Sample14 マスタテーブル管理Slim版 Src02
+#
+# .htaccessファイル
+#
+# ファイル名=.htaccess
+# フォルダ=/ph35/scottadminslim/public/
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]

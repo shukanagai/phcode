@@ -1,0 +1,72 @@
+{#
+/**
+ * PH35 Sample10 マスタテーブル管理完版
+ * 従業員情報削除画面。
+ *
+ * @author Shinzo SAITO
+ *
+ * ファイル名=empEdit.html
+ * フォルダ=/ph35/scottadminkan/templates/emp/
+ */
+#}
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Shinzo SAITO">
+        <title>従業員情報削除 | ScottAdminKan Sample</title>
+        <link rel="stylesheet" href="/ph35/scottadminkan/public/css/main.css" type="text/css">
+    </head>
+    <body>
+        <header>
+            <h1>従業員情報削除</h1>
+            <p><a href="/ph35/scottadminkan/public/logout.php">ログアウト</a></p>
+        </header>
+        <nav id="breadcrumbs">
+            <ul>
+                <li><a href="/ph35/scottadminkan/public/goTop.php">TOP</a></li>
+                <li><a href="/ph35/scottadminkan/public/emp/showEmpList.php">従業員リスト</a></li>
+                <li>従業員情報削除確認</li>
+            </ul>
+        </nav>
+        {% if validationMsgs %}
+        <section id="errorMsg">
+            <p>以下のメッセージをご確認ください。</p>
+            <ul>
+                {% for msg in validationMsgs %}
+                <li>{{msg}}</li>
+                {% endfor %}
+            </ul>
+        </section>
+        {% endif %}
+        <section>
+            <p>
+                以下の部門情報を削除します。<br>
+                よろしければ、削除ボタンをクリックしてください。
+            </p>
+            <dl>
+                <dt>ID</dt>
+                <dd>{{emp.id}}</dd>
+                <dt>従業員番号</dt>
+                <dd>{{emp.emNo}}</dd>
+                <dt>従業員名</dt>
+                <dd>{{emp.emName}}</dd>
+                <dt>役職</dt>
+                <dd>{{emp.emJob}}</dd>
+                <dt>上司番号</dt>
+                <dd>{{emp.emMgr}}</dd>
+                <dt>雇用日</dt>
+                <dd>{{emp.emHiredate}}</dd>
+                <dt>給与</dt>
+                <dd>{{emp.emSal}}</dd>
+                <dt>部門ID</dt>
+                <dd>{{emp.deptId}}</dd>
+            </dl>
+            <form action="/ph35/scottadminkan/public/emp/empDelete.php" method="post">
+                <input type="hidden" id="deleteEmpId" name="deleteEmpId" value="{{emp.id}}">
+                <button type="submit">削除</button>
+            </form>
+        </section>
+    </body>
+</html>
