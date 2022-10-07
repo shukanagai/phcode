@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="css/base.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>LOGO</h1>
+    <nav>
+      <ul>
+        <li>MiniList</li>
+        <li>MiniList</li>
+      </ul>
+      <ul>
+        <li>List</li>
+        <li>List</li>
+        <li>List</li>
+        <li>List</li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div id="mainBlock">
+      <h2>Heading</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <button id="openModal">Sign Up</button>
+    </div>
+  </main>
+  <!-- モーダルエリアここから -->
+<section id="modalArea">
+  <!--モーダル解除用の背景-->
+  <div class="modalBg"></div>
+  <div class="modalWrapper">
+    <div class="modalContents">
+      <h2>Sign Up</h2>
+      <p>Sign up for Disqus with your social media account or email address</p>
+      <form name="userForm">
+        <p><input type="text" class="inputText" placeholder="Name"></p>
+        <p class="alertText"></p>
+        <p><input type="text" class="inputText" placeholder="Email"></p>
+        <p class="alertText"></p>
+        <p><input type="text" class="inputText" placeholder="Password"></p>
+        <p class="alertText"></p>
+        <p class="signUpButton">Sign Up</p>
+      </form>
+    </div>
+    <div class="closeModal">
+      ×
+    </div>
+  </div>
+</section>
+  <!-- モーダルエリアここまで -->
+  <div id="contentsWrap">
+    <div id="containers_1">
+      <div class="minContainer_1">
+        <h2>Heading</h2>
+        <p><img src="img/minContainer_1_01.jpg" alt=""></p>
+        <p><img src="img/minContainer_1_02.jpg" alt=""></p>
+        <p><img src="img/minContainer_1_03.jpg" alt=""></p>
+        <ul>
+          <li><a href="#">Prev</a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">Next</a></li>
+        </ul>
+      </div>
+      <div class="minContainer_2">
+        <h2>Heading</h2>
+        <div class="item">
+          <p class="itemImage"><img src="img/minContainer_2_01.jpg" alt=""></p>
+          <div class="minItem">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <ul>
+              <li>2021.00.00</li>
+              <li>Good</li>
+            </ul>
+          </div>
+        </div>
+        <div class="item">
+          <p class="itemImage"><img src="img/minContainer_2_02.jpg" alt=""></p>
+          <div class="minItem">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <ul>
+              <li>2021.00.00</li>
+              <li>Good</li>
+            </ul>
+          </div>
+        </div>
+        <div class="item">
+          <p class="itemImage"><img src="img/minContainer_2_03.jpg" alt=""></p>
+          <div class="minItem">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <ul>
+              <li>2021.00.00</li>
+              <li>Good</li>
+            </ul>
+          </div>
+        </div>
+        <div class="item">
+          <p class="itemImage"><img src="img/minContainer_2_04.jpg" alt=""></p>
+          <div class="minItem">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <ul>
+              <li>2021.00.00</li>
+              <li>Good</li>
+            </ul>
+          </div>
+        </div>
+        <div class="item">
+          <p class="itemImage"><img src="img/minContainer_2_05.jpg" alt=""></p>
+          <div class="minItem">
+            <h3>Heading</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <ul>
+              <li>2021.00.00</li>
+              <li>Good</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="contents">
+      <h2>Heading</h2>
+      <div class="miniContainers_1">
+        <p><img src="img/miniContainers_1_01.jpg" alt=""></p>
+        <p><img src="img/miniContainers_1_02.jpg" alt=""></p>
+      </div>
+      <div class="miniContainers_2">
+        <p><img src="img/miniContainers_2_01.jpg" alt=""></p>
+        <p><img src="img/miniContainers_2_02.jpg" alt=""></p>
+      </div>
+    </div>
+    <article>
+      <h2>Heading</h2>
+      <div class="thumbnail">
+        <section>
+          <h3><img src="img/thumbnail_1.jpg" alt=""></h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        </section>
+        <section>
+          <h3><img src="img/thumbnail_2.jpg" alt=""></h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        </section>
+        <section>
+          <h3><img src="img/thumbnail_3.jpg" alt=""></h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        </section>
+      </div>
+    </article>
+  </div>
+  <footer>
+    <div id="footerContainer">
+      <div class="footer_items_1">
+        <ul>
+          <li>IconList</li>
+          <li>IconList</li>
+          <li>IconList</li>
+          <li>IconList</li>
+        </ul>
+        <ul>
+          <li>MiniList</li>
+          <li>MiniList</li>
+          <li>MiniList</li>
+          <li>MiniList</li>
+        </ul>
+      </div>
+      <div class="footer_items_2">
+        <section>
+          <h3>Heading</h3>
+          <ul>
+            <li>MiniList</li>
+            <li>MiniList</li>
+            <li>MiniList</li>
+            <li>MiniList</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Heading</h3>
+          <ul>
+            <li>MiniList</li>
+            <li>MiniList</li>
+            <li>MiniList</li>
+            <li>MiniList</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Heading</h3>
+          <ul>
+            <li>MiniList</li>
+            <li>MiniList</li>
+            <li>MiniList</li>
+            <li>MiniList</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </footer>
+  <script src="js/event.js"></script>
+</body>
+</html>

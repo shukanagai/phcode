@@ -1,0 +1,409 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 20vh;
+    margin: 0 auto;
+
+    h1{
+        width: 150px;
+        height: 50px;
+        background-color: darkblue;
+        color: white;
+        text-align: center;
+        line-height: 50px;
+        font-size: 2rem;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    nav{
+            
+        ul{
+            display: flex;
+            justify-content: flex-end;
+            // margin-left: auto;
+            margin: 15px 0;
+
+            li{
+                font-size: 1rem;
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+main{
+    height: 80vh;
+    width: 100%;
+    background-color: lightcoral;
+    display: flex;
+    align-items: center;
+    background: url(../img/main_bg.jpg) no-repeat center ;
+    background-size: cover;
+
+    #mainBlock{
+        margin-left: 10%;
+
+        h2{
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        p{
+            width: 400px;
+            margin-bottom: 20px;
+        }
+
+        button{
+            display: block;
+            padding: 10px 40px;
+            background-color: darkblue;
+            color: white;
+            border-radius: 5px;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+/* ==================================
+ モーダルCSS 
+ ================================== */
+    #modalArea{
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        background-color: rgba(0, 0 , 0 , 0.5);
+    }
+
+    // モーダル解除用の背景
+    // .modalBg{
+    //     width: 100%;
+    //     height: 100%;
+    //     background-color: rgba(0, 0 , 0 , 0.5);
+    // }
+
+    .modalWrapper {
+        width: 90%;
+        height: auto;
+        padding: 30px 30px;
+        background-color: rgb(247, 244, 245);
+        max-width: 400px;
+        // モーダルウィンドウを画面の水平垂直の中央に配置
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+
+        .modalContents{
+            h2{
+                text-align: center;
+                font-size: 3rem;
+                margin: 30px 0;
+            }
+
+            p{
+                font-size: 1.2rem;
+                line-height: 2.0rem;
+                margin-bottom: 20px;
+            }
+
+            form[name="userForm"]{
+
+                .alertBox{
+                    border: 1px solid red;
+                    width: 100%;
+                    height: 50px;
+                    line-height: 50px;
+                    text-align: center;
+                    color: red;
+                    border-radius: 5px;
+                    padding-left: 10px;
+                    background-color: pink;
+                  }
+                p{
+                    line-height: normal;
+                    margin-bottom: 10px;
+
+                    &:nth-last-of-type(2){
+                        margin-bottom: 30px;
+                    }
+
+                    input{
+                        border: 1px solid #999;
+                        width: 100%;
+                        height: 50px;
+                        border-radius: 5px;
+                        padding-left: 10px;
+                    }
+                }
+
+                .signUpButton{
+                    width: 100%;
+                    height: 50px;
+                    line-height: 50px;
+                    border-radius: 5px;
+                    background-color: darkblue;
+                    color: #fff;
+                    text-align: center;
+                }
+            }
+        }
+
+        /* モーダル解除のアイコン */
+        .closeModal {
+
+            cursor: pointer;
+            position: absolute;
+            top:10px;
+            right: 20px;
+        }
+    }
+
+.closeModal{
+    cursor:  pointer;
+    position: absolute;
+    top:10px;
+    right: 20px;
+}
+
+/* ==================================
+ モーダルfin 
+ ================================== */
+
+#contentsWrap{
+    width: 80%;
+    margin: 0 auto;
+
+    #containers_1{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 150px;
+
+        .minContainer_1{
+            width: calc(50% - 30px);
+
+            p{
+                width: 100%;
+                height: 250px;
+                background-color: palegreen;
+                margin-bottom: 30px;
+                border-radius: 10px;
+                overflow: hidden;
+
+                img{
+                    width: 100%;
+                    height: 250px;
+                }
+            }
+
+            ul{
+                display: flex;
+                justify-content: center;
+                margin: 0 10px;
+
+                li{
+
+                    a{
+                        width: 45px;
+                        height: 45px;
+                        background-color: white;
+                        border: 1px solid #999;
+                        border-radius: 3px;
+                        line-height: 40px;
+                        text-align: center;
+                        font-size: 0.8rem;
+                        margin: 0 5px;
+                        display: block;
+
+                        &:active{
+                            background-color: #999;
+                        }
+                    }
+                }
+            }
+        }
+
+        .minContainer_2{
+            width: calc(50% - 30px);
+
+            .item{
+                display: flex;
+                margin-bottom: 30px;
+
+                .itemImage{
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 10px;
+
+                    img{
+                        width: 150px;
+                        height: 150px;
+                    }
+                }
+
+                .minItem{
+                    margin-left: 20px;
+
+                    h3{
+                        margin-bottom: 20px;
+                    }
+
+                    p{
+                        margin-bottom: 20px;
+                        text-align: justify;
+                    }
+                    
+                    ul{
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+            }
+        }
+    }
+
+    #contents{
+        margin-top: 150px;
+
+        .miniContainers_1{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+
+            p:nth-of-type(1){
+                width: calc(70% - 15px);
+                height: 40vh;
+                background-color: #999;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            p:nth-of-type(2){
+                width: calc(30% - 15px);
+                height: 40vh;
+                background-color: rgb(255, 181, 181);
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        .miniContainers_2{
+            @extend .miniContainers_1;
+
+            p:nth-of-type(1){
+                width: calc(30% - 15px);
+                height: 40vh;
+                background-color: rgb(255, 181, 181);
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            p:nth-of-type(2){
+                width: calc(70% - 15px);
+                height: 40vh;
+                background-color: #999;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+article{
+    margin-top: 150px;
+
+    h2{
+        text-align: center;
+    }
+
+    .thumbnail{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 100px;
+        
+        section{
+            width: 25%;
+            text-align: center;
+
+            h3{
+                border-radius: 100%;
+                margin-bottom: 30px;
+                margin: 0 auto 20px;
+                overflow: hidden;
+                width: 200px;
+                height: 200px;
+
+                img{
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+        }
+    }
+}
+
+footer{
+    background-color: #ddd;
+    padding: 50px 0;
+    margin-top: 150px;
+
+    #footerContainer{
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 auto;
+
+        .footer_items_1{
+            width: 40%;
+    
+            ul{
+                display: flex;
+                width: fit-content;
+    
+                li{
+                    margin-right: 20px;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    
+        .footer_items_2{
+            width: 60%;
+            display: flex;
+            justify-content: space-around;
+    
+            section{
+                width: fit-content;
+
+                h3{
+                    margin-bottom: 10px;
+                }
+
+                ul{
+                    li{
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+

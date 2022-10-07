@@ -1,0 +1,391 @@
+@charset "UTF-8";
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  height: 20vh;
+  margin: 0 auto;
+}
+
+header h1 {
+  width: 150px;
+  height: 50px;
+  background-color: darkblue;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: flex-end;
+  margin: 15px 0;
+}
+
+header nav ul li {
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+main {
+  height: 80vh;
+  width: 100%;
+  background-color: lightcoral;
+  display: flex;
+  align-items: center;
+  background: url(../img/main_bg.jpg) no-repeat center;
+  background-size: cover;
+}
+
+main #mainBlock {
+  margin-left: 10%;
+}
+
+main #mainBlock h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+main #mainBlock p {
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+main #mainBlock button {
+  display: block;
+  padding: 10px 40px;
+  background-color: darkblue;
+  color: white;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+/* ==================================
+ モーダルCSS 
+ ================================== */
+#modalArea {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalBg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalWrapper {
+  width: 50%;
+  height: auto;
+  padding: 30px 30px;
+  background-color: #f7f4f5;
+  max-width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* モーダル解除のアイコン */
+}
+
+.modalWrapper .modalContents h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 30px 0;
+}
+
+.modalWrapper .modalContents p {
+  font-size: 1.2rem;
+  line-height: 2.0rem;
+  margin-bottom: 20px;
+}
+
+.modalWrapper .modalContents form[name="userForm"] p {
+  line-height: normal;
+  margin-bottom: 10px;
+}
+
+.modalWrapper .modalContents form[name="userForm"] p:nth-last-of-type(2) {
+  margin-bottom: 30px;
+}
+
+.modalWrapper .modalContents form[name="userForm"] p input {
+  border: 1px solid #999;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.modalWrapper .modalContents form[name="userForm"] .signUpButton {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 5px;
+  background-color: darkblue;
+  color: #fff;
+  text-align: center;
+}
+
+.modalWrapper .closeModal {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.closeModal {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.alertText{
+  border: 1px solid red;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: red;
+  border-radius: 5px;
+  padding-left: 10px;
+  background-color: pink;
+}
+
+
+
+/* ==================================
+ モーダルfin 
+ ================================== */
+#contentsWrap {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#contentsWrap #containers_1 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 150px;
+}
+
+#contentsWrap #containers_1 .minContainer_1 {
+  width: calc(50% - 30px);
+}
+
+#contentsWrap #containers_1 .minContainer_1 p {
+  width: 100%;
+  height: 250px;
+  background-color: palegreen;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#contentsWrap #containers_1 .minContainer_1 p img {
+  width: 100%;
+  height: 250px;
+}
+
+#contentsWrap #containers_1 .minContainer_1 ul {
+  display: flex;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+#contentsWrap #containers_1 .minContainer_1 ul li a {
+  width: 45px;
+  height: 45px;
+  background-color: white;
+  border: 1px solid #999;
+  border-radius: 3px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 0.8rem;
+  margin: 0 5px;
+  display: block;
+}
+
+#contentsWrap #containers_1 .minContainer_1 ul li a:active {
+  background-color: #999;
+}
+
+#contentsWrap #containers_1 .minContainer_2 {
+  width: calc(50% - 30px);
+}
+
+#contentsWrap #containers_1 .minContainer_2 .item {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+#contentsWrap #containers_1 .minContainer_2 .item .itemImage {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+}
+
+#contentsWrap #containers_1 .minContainer_2 .item .itemImage img {
+  width: 150px;
+  height: 150px;
+}
+
+#contentsWrap #containers_1 .minContainer_2 .item .minItem {
+  margin-left: 20px;
+}
+
+#contentsWrap #containers_1 .minContainer_2 .item .minItem h3 {
+  margin-bottom: 20px;
+}
+
+#contentsWrap #containers_1 .minContainer_2 .item .minItem p {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+#contentsWrap #containers_1 .minContainer_2 .item .minItem ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+#contentsWrap #contents {
+  margin-top: 150px;
+}
+
+#contentsWrap #contents .miniContainers_1, #contentsWrap #contents .miniContainers_2 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#contentsWrap #contents .miniContainers_1 p:nth-of-type(1), #contentsWrap #contents .miniContainers_2 p:nth-of-type(1) {
+  width: calc(70% - 15px);
+  height: 40vh;
+  background-color: #999;
+}
+
+#contentsWrap #contents .miniContainers_1 p:nth-of-type(1) img, #contentsWrap #contents .miniContainers_2 p:nth-of-type(1) img {
+  width: 100%;
+  height: 100%;
+}
+
+#contentsWrap #contents .miniContainers_1 p:nth-of-type(2), #contentsWrap #contents .miniContainers_2 p:nth-of-type(2) {
+  width: calc(30% - 15px);
+  height: 40vh;
+  background-color: #ffb5b5;
+}
+
+#contentsWrap #contents .miniContainers_1 p:nth-of-type(2) img, #contentsWrap #contents .miniContainers_2 p:nth-of-type(2) img {
+  width: 100%;
+  height: 100%;
+}
+
+#contentsWrap #contents .miniContainers_2 p:nth-of-type(1) {
+  width: calc(30% - 15px);
+  height: 40vh;
+  background-color: #ffb5b5;
+}
+
+#contentsWrap #contents .miniContainers_2 p:nth-of-type(1) img {
+  width: 100%;
+  height: 100%;
+}
+
+#contentsWrap #contents .miniContainers_2 p:nth-of-type(2) {
+  width: calc(70% - 15px);
+  height: 40vh;
+  background-color: #999;
+}
+
+#contentsWrap #contents .miniContainers_2 p:nth-of-type(2) img {
+  width: 100%;
+  height: 100%;
+}
+
+article {
+  margin-top: 150px;
+}
+
+article h2 {
+  text-align: center;
+}
+
+article .thumbnail {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 100px;
+}
+
+article .thumbnail section {
+  width: 25%;
+  text-align: center;
+}
+
+article .thumbnail section h3 {
+  border-radius: 100%;
+  margin-bottom: 30px;
+  margin: 0 auto 20px;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+}
+
+article .thumbnail section h3 img {
+  width: 200px;
+  height: 200px;
+}
+
+footer {
+  background-color: #ddd;
+  padding: 50px 0;
+  margin-top: 150px;
+}
+
+footer #footerContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+
+footer #footerContainer .footer_items_1 {
+  width: 40%;
+}
+
+footer #footerContainer .footer_items_1 ul {
+  display: flex;
+  width: fit-content;
+}
+
+footer #footerContainer .footer_items_1 ul li {
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+
+footer #footerContainer .footer_items_2 {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+}
+
+footer #footerContainer .footer_items_2 section {
+  width: fit-content;
+}
+
+footer #footerContainer .footer_items_2 section h3 {
+  margin-bottom: 10px;
+}
+
+footer #footerContainer .footer_items_2 section ul li {
+  margin-bottom: 5px;
+}
+/*# sourceMappingURL=style.css.map */
